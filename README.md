@@ -1,9 +1,9 @@
-# 🎮 Inventario de Videojuegos
+﻿# 🎮 Inventario de Videojuegos
 
 ## 1. Información general
 
 - **Proyecto:** Inventario de Videojuegos
-- **Estudiante:** _[TU NOMBRE COMPLETO]_
+- **Estudiante:** _Crismar Vergara_
 - **Asignatura:** Programación con C# y .NET — Parcial Final
 - **Descripción:** Aplicación de escritorio para registrar y administrar una colección personal de videojuegos.
 - **Problema que resuelve:** Llevar el control de los juegos que se poseen (plataforma, género, precio y estado de avance) suele hacerse de memoria o en notas dispersas. La aplicación centraliza esa información y la conserva en una base de datos.
@@ -117,8 +117,8 @@ classDiagram
 2. Instalar **Git**: <https://git-scm.com/>.
 3. Clonar el repositorio:
    ```bash
-   git clone https://github.com/_[TU-USUARIO]_/_[NOMBRE-DEL-REPOSITORIO]_.git
-   cd _[NOMBRE-DEL-REPOSITORIO]_
+   git clone https://github.com/_crismarvergara0916-bot_/_inventario-videojuegos_.git
+   cd _inventario-videojuegos_
    ```
 4. Restaurar las dependencias (descarga Avalonia y Microsoft.Data.Sqlite):
    ```bash
@@ -163,7 +163,6 @@ dotnet run
 
 ## 8. Evidencias de funcionamiento
 
-> Reemplaza cada imagen por tu captura real, guardada en la carpeta `evidencias/`.
 
 | # | Prueba | Acción | Resultado esperado | Evidencia |
 |---|---|---|---|---|
@@ -172,14 +171,20 @@ dotnet run
 | 3 | Actualización | Seleccionar, modificar y pulsar *Actualizar* | Los cambios se guardan | ![Actualización](evidencias/03-actualizacion.png) |
 | 4 | Eliminación | Seleccionar y eliminar (confirmando) | El registro deja de aparecer | ![Eliminación](evidencias/04-eliminacion.png) |
 | 5 | Validación | Dejar el título vacío o escribir un año inválido | Mensaje de error y el programa sigue abierto | ![Validación](evidencias/05-validacion.png) |
-| 6 | Persistencia | Cerrar y volver a abrir | Los registros siguen disponibles | ![Persistencia](evidencias/06-persistencia.png) |
+| 6 | Persistencia | Cerrar y volver a abrir | Los registros siguen disponibles | [▶ Ver video de la prueba](evidencias/06-persistencia.mp4) |
 
-_Debajo de cada imagen escribe 1–2 líneas explicando qué probaste y qué resultado obtuviste._
+
+### Descripción de las pruebas
+
+1. **Registro:** se completó el formulario con un videojuego y se pulsó *Agregar*. El juego apareció en la tabla y se mostró el mensaje de éxito.
+2. **Consulta:** con varios registros guardados se visualizó la tabla y se probó el buscador por título. Se mostraron los registros almacenados.
+3. **Actualización:** se seleccionó un juego, se modificó un dato y se pulsó *Actualizar*. El cambio se reflejó en la tabla.
+4. **Eliminación:** se seleccionó un juego y se confirmó la eliminación. El registro dejó de aparecer.
+5. **Validación:** se intentó guardar con datos incorrectos (por ejemplo, título vacío o año inválido). La aplicación mostró un mensaje de error en rojo y no se cerró.
+6. **Persistencia:** se cerró la aplicación y se volvió a abrir con `dotnet run`. Los registros guardados seguían disponibles.
 
 ## 9. Problemas encontrados y soluciones
 
-> **Escribe aquí una dificultad REAL que hayas tenido.** Ejemplo de formato:
->
-> **Problema:** _[describe el error o dificultad, p. ej.: la tabla no mostraba datos / error al restaurar paquetes / el formulario se limpiaba al seleccionar una fila]_
->
-> **Solución:** _[explica qué hiciste para resolverlo y qué aprendiste]_
+**Problema:** al subir el proyecto a GitHub, las capturas de pantalla estaban en una carpeta llamada `capturas/`, pero el README las buscaba en `evidencias/`. Por eso las imágenes no se mostraban en la documentación y aparecían como enlaces rotos.
+
+**Solución:** se movieron las imágenes a la carpeta `evidencias/` con los nombres exactos que usa el README (`01-registro.png`, `02-consulta.png`, etc.), se eliminó la carpeta `capturas/` y se subieron los cambios con `git add`, `git commit` y `git push`. Aprendí que las rutas de las imágenes en Markdown deben coincidir exactamente con los nombres de carpetas y archivos del repositorio.
