@@ -117,8 +117,8 @@ classDiagram
 2. Instalar **Git**: <https://git-scm.com/>.
 3. Clonar el repositorio:
    ```bash
-   git clone https://github.com/_crismarvergara0916-bot_/_inventario-videojuegos_.git
-   cd _inventario-videojuegos_
+   git clone https://github.com/crismarvergara0916-bot/inventario-videojuegos.git
+   cd inventario-videojuegos
    ```
 4. Restaurar las dependencias (descarga Avalonia y Microsoft.Data.Sqlite):
    ```bash
@@ -188,3 +188,4 @@ dotnet run
 **Problema:** al subir el proyecto a GitHub, las capturas de pantalla estaban en una carpeta llamada `capturas/`, pero el README las buscaba en `evidencias/`. Por eso las imágenes no se mostraban en la documentación y aparecían como enlaces rotos.
 
 **Solución:** se movieron las imágenes a la carpeta `evidencias/` con los nombres exactos que usa el README (`01-registro.png`, `02-consulta.png`, etc.), se eliminó la carpeta `capturas/` y se subieron los cambios con `git add`, `git commit` y `git push`. Aprendí que las rutas de las imágenes en Markdown deben coincidir exactamente con los nombres de carpetas y archivos del repositorio.
+
